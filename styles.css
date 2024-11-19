@@ -1,0 +1,120 @@
+body {
+    background-color: #f7f0ee;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.line {
+    margin: 10px 0;
+}
+
+.letter {
+    height: 50px;
+    margin: 0 5px;
+}
+
+.dog {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.dog img {
+    height: 100px;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.letter {
+    animation: float 2s infinite ease-in-out;
+}
+
+.letter:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.letter:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.letter:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.letter:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.letter:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+/* Keyframes */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.dog {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.dog img {
+    height: 100px;
+}
+
+.dog img:hover {
+    
+}
+
+.speech-bubble {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff7f0; /* Color pastel suave */
+    border: 2px solid #d4a373; /* Un borde cálido */
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5a3921; /* Un tono marrón elegante */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: none;
+    white-space: nowrap;
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    text-align: center;
+    z-index: 10;
+}
+
+.speech-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #d4a373 transparent transparent transparent; /* Punta de la burbuja */
+}
